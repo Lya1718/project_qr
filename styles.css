@@ -5,7 +5,6 @@ body {
     margin: 0;
 }
 
-
 .container {
     display: flex;
     justify-content: center;
@@ -13,24 +12,7 @@ body {
     height: 100%;
 }
 
-
-.card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 20%;
-    text-align: center;
-    background-color: white;
-    border-radius: 3vh;
-    padding: 1.5vh;
-    /* margin: 0 auto; */
-    box-shadow: 10px 10px 10px hsl(212, 45%, 89%);
-}
-
-.card-text {
-    padding: 1vh;
-}
+/* CARD */
 
 .card-title {
     color: hsl(218, 44%, 22%);
@@ -40,7 +22,43 @@ body {
     color: hsl(220, 15%, 55%);
 }
 
+.qr-code,
+.card-text {
+    width: 100%;
+}
+
 #qr-image {
     width: 100%;
     border-radius: 3vh;
+}
+
+/* BREAKPOINTS */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 65%;
+    text-align: center;
+    background-color: white;
+    border-radius: 3vh;
+    padding: 1.5vh;
+    box-shadow: 10px 10px 10px hsl(212, 45%, 89%);
+}
+
+@media (min-width:640px) {
+    .card {
+        width: 40%;
+    }
+}
+
+@media (min-width:900px) {
+    .card {
+        width: 20%;
+    }
+}
+
+@media (min-width:1800px) {
+    .card {
+        width: 10%;
+    }
 }
